@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/OWNER/vi-humanizer/main/schema/vihumanizerrc.schema.json",
+  "$id": "https://raw.githubusercontent.com/phongptn93/vi-humanizer/main/schema/vihumanizerrc.schema.json",
   "title": "Cấu hình vi-humanizer (.vihumanizerrc.json)",
   "type": "object",
   "additionalProperties": false,

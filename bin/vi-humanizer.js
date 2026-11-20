@@ -44,7 +44,7 @@ Tuỳ chọn
 Mã thoát: 0 đạt · 1 không đạt · 2 lỗi cách dùng`;
 
 const CONFIG_TEMPLATE = {
-  $schema: 'https://raw.githubusercontent.com/OWNER/vi-humanizer/main/schema/vihumanizerrc.schema.json',
+  $schema: 'https://raw.githubusercontent.com/phongptn93/vi-humanizer/main/schema/vihumanizerrc.schema.json',
   preset: 'bao-cao',
   failOn: 'nhieu',
   rules: { 'tinh-tu-keu': 'info' },

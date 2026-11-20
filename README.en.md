@@ -38,11 +38,11 @@ The costliest error when "smoothing" a text is not on that list: **changing the 
 ## Install
 
 ```text
-/plugin marketplace add OWNER/vi-humanizer
+/plugin marketplace add phongptn93/vi-humanizer
 /plugin install vi-humanizer@vi-humanizer
 ```
 
-To use only the CLI, run `npx github:OWNER/vi-humanizer scan file.md`. For GitHub Actions, use `OWNER/vi-humanizer@v1`.
+To use only the CLI, run `npx github:phongptn93/vi-humanizer scan file.md`. For GitHub Actions, use `phongptn93/vi-humanizer@v1`.
 
 ## Scope
 

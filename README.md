@@ -5,7 +5,7 @@
 **Biên tập văn phong tiếng Việt cho AI agent và cho người viết.**
 Phát hiện văn mẫu, sửa chính tả – trình bày, viết lại đúng thể loại và giọng, và **chứng minh** không một con số nào bị đổi.
 
-[![CI](https://github.com/OWNER/vi-humanizer/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/vi-humanizer/actions/workflows/ci.yml)
+[![CI](https://github.com/phongptn93/vi-humanizer/actions/workflows/ci.yml/badge.svg)](https://github.com/phongptn93/vi-humanizer/actions/workflows/ci.yml)
 ![Node](https://img.shields.io/badge/node-%E2%89%A518.17-339933)
 ![Phụ thuộc](https://img.shields.io/badge/ph%E1%BB%A5%20thu%E1%BB%99c-0-blue)
 [![Giấy phép](https://img.shields.io/badge/gi%E1%BA%A5y%20ph%C3%A9p-MIT-green)](LICENSE)
@@ -69,7 +69,7 @@ Lỗi đắt nhất khi "làm mượt" văn bản lại không nằm trong bản
 ### Claude Code
 
 ```text
-/plugin marketplace add OWNER/vi-humanizer
+/plugin marketplace add phongptn93/vi-humanizer
 /plugin install vi-humanizer@vi-humanizer
 ```
 
@@ -80,9 +80,9 @@ Agent khác đọc được `SKILL.md` (Codex, Cursor…): chép thư mục [`sk
 ### CLI
 
 ```bash
-npx github:OWNER/vi-humanizer scan van-ban.md
+npx github:phongptn93/vi-humanizer scan van-ban.md
 # hoặc cài toàn cục
-npm install -g github:OWNER/vi-humanizer
+npm install -g github:phongptn93/vi-humanizer
 ```
 
 ### Luôn bật cho mọi câu trả lời
@@ -126,7 +126,7 @@ bien-ban.md: 7 sửa · giữ đủ 1 dữ kiện
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/OWNER/vi-humanizer/main/schema/vihumanizerrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/phongptn93/vi-humanizer/main/schema/vihumanizerrc.schema.json",
   "preset": "bao-cao",
   "failOn": "nhieu",
   "failAbove": 30,
@@ -168,7 +168,7 @@ jobs:
     permissions: { contents: read, security-events: write }
     steps:
       - uses: actions/checkout@v4
-      - uses: OWNER/vi-humanizer@v1
+      - uses: phongptn93/vi-humanizer@v1
         with:
           paths: docs
           the-loai: huong-dan
@@ -185,7 +185,7 @@ Pre-commit:
 
 ```yaml
 repos:
-  - repo: https://github.com/OWNER/vi-humanizer
+  - repo: https://github.com/phongptn93/vi-humanizer
     rev: v1.0.0
     hooks: [{ id: vi-humanizer }]
 ```
