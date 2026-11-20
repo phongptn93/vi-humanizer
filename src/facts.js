@@ -72,9 +72,13 @@ export function canonical(kind, raw) {
   }
 }
 
+// Ký tự vô hình (U+200B–U+200D, U+2060, U+FEFF): bỏ trước khi rút, để việc dọn chúng không bị coi là đổi dữ kiện.
+// Dựng bằng mã số để mã nguồn không chứa ký tự vô hình thật.
+const INVISIBLE = new RegExp(`[${String.fromCharCode(0x200B)}-${String.fromCharCode(0x200D)}${String.fromCharCode(0x2060, 0xFEFF)}]`, 'g');
+
 /** Rút dữ kiện; mỗi giá trị chuẩn hoá xuất hiện một lần, kèm số lần gặp. */
 export function extractFacts(input) {
-  const chars = [...nfc(input ?? '')];
+  const chars = [...nfc(input ?? '').replace(INVISIBLE, '')];
   let buffer = chars.join('');
   const facts = new Map();
 

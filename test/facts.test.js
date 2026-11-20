@@ -3,6 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { canonicalNumber, compareFacts, extractFacts } from '../src/facts.js';
+import { fix } from '../src/fix.js';
 
 test('đọc số theo quy ước Việt Nam', () => {
   const cases = {
@@ -58,4 +59,12 @@ test('viết tắt và mã được rút; chữ thường thì không', () => {
   assert.ok(texts.includes('CNC-02'));
   assert.ok(texts.includes('LSX'));
   assert.ok(!texts.includes('sp'));
+});
+
+test('ký tự vô hình không làm đổi dữ kiện; fix dọn được mà không bị từ chối', () => {
+  const zwsp = String.fromCharCode(0x200B);
+  assert.equal(compareFacts(`Mã${zwsp}SP01 đạt 5.`, 'MãSP01 đạt 5.').ok, true);
+  const r = fix(`Mã${zwsp}SP01 xong.`);
+  assert.equal(r.ok, true);
+  assert.ok(!r.text.includes(zwsp));
 });
