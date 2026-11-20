@@ -31,14 +31,14 @@ runs:
         set -euo pipefail
         args=()
         [ -n "${{ inputs.the-loai }}" ] && args+=(--the-loai "${{ inputs.the-loai }}")
-        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} --format github "${args[@]}"
+        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} --format github ${args[@]+"${args[@]}"}
     - name: SARIF
       if: ${{ inputs.sarif != '' }}
       shell: bash
       run: |
         args=()
         [ -n "${{ inputs.the-loai }}" ] && args+=(--the-loai "${{ inputs.the-loai }}")
-        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} --format sarif "${args[@]}" > "${{ inputs.sarif }}"
+        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} --format sarif ${args[@]+"${args[@]}"} > "${{ inputs.sarif }}"
     - name: Kiểm ngưỡng
       if: ${{ inputs.fail-on != '' || inputs.fail-above != '' }}
       shell: bash
@@ -48,4 +48,4 @@ runs:
         [ -n "${{ inputs.the-loai }}" ] && args+=(--the-loai "${{ inputs.the-loai }}")
         [ -n "${{ inputs.fail-on }}" ] && args+=(--fail-on "${{ inputs.fail-on }}")
         [ -n "${{ inputs.fail-above }}" ] && args+=(--fail-above "${{ inputs.fail-above }}")
-        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} "${args[@]}"
+        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} ${args[@]+"${args[@]}"}
