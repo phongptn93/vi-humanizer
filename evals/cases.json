@@ -1,0 +1,44 @@
+[
+  {
+    "id": "email-bao-cao-su-co",
+    "theLoai": "email",
+    "nguoiDoc": "trưởng phòng sản xuất",
+    "goc": "Chắc chắn rồi! Dưới đây là thông tin tổng hợp về sự cố.\n\nTrong bối cảnh sản xuất ngày nay, việc đảm bảo máy móc vận hành ổn định là vô cùng cần thiết. Vào ca 2 ngày 18/11/2026, máy ép số 3 đã gặp sự cố kẹt khuôn — kéo dài 45 phút — gây ảnh hưởng đến tiến độ. Sự cố đã được xử lý bởi tổ bảo trì một cách nhanh chóng và một cách chuyên nghiệp. Điều này cho thấy tổ bảo trì đóng vai trò then chốt. Sản lượng ca đạt 1.240 sản phẩm, thiếu 160 sản phẩm so với kế hoạch.\n\nTóm lại, sự cố đã được khắc phục. Hy vọng thông tin trên hữu ích. Nếu anh cần thêm thông tin, đừng ngần ngại liên hệ em nhé!",
+    "vietLai": "Chào anh,\n\nCa 2 ngày 18/11/2026, máy ép số 3 kẹt khuôn và dừng 45 phút, làm chậm tiến độ ca. Tổ bảo trì đã xử lý nhanh, máy chạy lại bình thường.\n\nSản lượng ca đạt 1.240 sản phẩm, thiếu 160 so với kế hoạch.\n\nEm"
+  },
+  {
+    "id": "gioi-thieu-san-pham",
+    "theLoai": "gioi-thieu",
+    "nguoiDoc": "chủ xưởng vừa và nhỏ",
+    "goc": "Trong thời đại số, quản lý kho hiệu quả đóng vai trò quan trọng đối với mọi doanh nghiệp. Hãy cùng tìm hiểu giải pháp đột phá của chúng tôi!\n\nPhần mềm không chỉ giúp bạn tiết kiệm thời gian mà còn mang lại giá trị to lớn. Nó cho phép bạn dễ dàng theo dõi tồn kho. Nó giúp bạn lập phiếu nhập xuất một cách nhanh chóng. Giao diện vô cùng thân thiện, hết sức dễ dùng và cực kỳ hiện đại.\n\nDù bạn là xưởng nhỏ hay nhà máy lớn, chúng tôi đều có giải pháp toàn diện, tối ưu và vượt trội. Sau 3 tháng sử dụng, thời gian kiểm kê giảm từ 2 ngày xuống còn 4 giờ. Chi phí chỉ từ 1.500.000 đồng/tháng.",
+    "vietLai": "Phần mềm quản lý kho để theo dõi tồn kho và lập phiếu nhập, xuất nhanh, dùng được cho cả xưởng nhỏ lẫn nhà máy lớn.\n\nSau 3 tháng sử dụng, thời gian kiểm kê giảm từ 2 ngày xuống còn 4 giờ. Giao diện dễ dùng.\n\nChi phí từ 1.500.000 đồng/tháng."
+  },
+  {
+    "id": "thong-bao-noi-bo",
+    "theLoai": "thong-bao",
+    "nguoiDoc": "toàn bộ nhân viên khối văn phòng",
+    "goc": "# Thông Báo Về Việc Bảo Trì Hệ Thống\n\nKính gửi toàn thể quý anh chị,\n\nNhằm nâng tầm chất lượng dịch vụ và mang lại trải nghiệm liền mạch, bộ phận CNTT sẽ tiến hành công tác bảo trì hệ thống ERP. Việc bảo trì định kỳ là hết sức quan trọng. Thời gian bảo trì: từ 20:00 ngày 22/11/2026 đến 06:00 ngày 23/11/2026. Trong thời gian này, hệ thống sẽ được tạm dừng bởi bộ phận CNTT.\n\nĐiều này có thể gây ra một số bất tiện. Điều này là cần thiết để đảm bảo an toàn dữ liệu. Điều này cũng giúp hệ thống chạy nhanh hơn. Mọi thắc mắc xin liên hệ anh Tuấn qua email tuan.it@congty.vn.\n\nChúc anh chị một ngày làm việc hiệu quả!",
+    "vietLai": "# Tạm dừng hệ thống ERP để bảo trì\n\nKính gửi các anh chị,\n\nBộ phận CNTT tạm dừng hệ thống ERP từ 20:00 ngày 22/11/2026 đến 06:00 ngày 23/11/2026 để bảo trì định kỳ. Đợt bảo trì giúp bảo đảm an toàn dữ liệu và giúp hệ thống chạy nhanh hơn.\n\nTrong thời gian này anh chị chưa dùng được ERP. Cần hỗ trợ, anh chị liên hệ anh Tuấn qua email tuan.it@congty.vn.\n\nBộ phận CNTT"
+  },
+  {
+    "id": "bao-cao-lanh-dao",
+    "theLoai": "bao-cao",
+    "nguoiDoc": "giám đốc nhà máy, đọc trên điện thoại",
+    "goc": "Dưới đây là báo cáo tổng quan về tình hình sản xuất tháng 10/2026.\n\nNhìn chung, tháng 10 ghi nhận sự sụt giảm của sản lượng so với kế hoạch. Có thể thấy rằng tổng sản lượng đạt 149.094 sản phẩm, giảm 21.523 sản phẩm (−12,6%) so với kế hoạch. Sự thay đổi này chủ yếu đến từ chuyền ATN7, nơi đóng vai trò then chốt trong toàn bộ dây chuyền. Chuyền ATN7 dừng máy tổng cộng 37 giờ do thiếu vật tư. Điều đáng chú ý là OEE toàn nhà máy chỉ đạt 71,4%.\n\nTóm lại, tháng 10 là một tháng đầy thách thức nhưng cũng mở ra cơ hội cải thiện. Không thể phủ nhận rằng việc quản lý vật tư là vô cùng quan trọng.",
+    "vietLai": "Tháng 10/2026 nhà máy đạt 149.094 sản phẩm, thiếu 21.523 so với kế hoạch (−12,6%).\n\nPhần lớn mức hụt nằm ở chuyền ATN7: chuyền dừng tổng cộng 37 giờ vì thiếu vật tư. OEE toàn nhà máy đạt 71,4%.\n\nViệc cần ưu tiên là khâu cấp vật tư cho ATN7."
+  },
+  {
+    "id": "cong-van-de-nghi",
+    "theLoai": "cong-van",
+    "nguoiDoc": "Ban Quản lý khu công nghiệp",
+    "goc": "Kính gửi: Ban Quản lý Khu công nghiệp Tân Bình\n\nNhư chúng ta đã biết, công tác phòng cháy chữa cháy đóng vai trò vô cùng quan trọng trong hoạt động sản xuất. Trong bối cảnh nhu cầu sản xuất hiện nay ngày càng tăng cao, việc đảm bảo an toàn là hết sức cần thiết. Công ty TNHH An Phát xin trân trọng đề nghị Quý Ban xem xét và hỗ trợ một cách tích cực việc kiểm tra hệ thống PCCC tại nhà xưởng số 2, lô C3, trong thời gian từ ngày 25/11/2026 đến ngày 27/11/2026. Việc kiểm tra này không chỉ giúp đảm bảo an toàn mà còn góp phần không nhỏ vào sự phát triển bền vững.\n\nCông ty xin chân thành cảm ơn sự quan tâm của Quý Ban.\n\nTrân trọng./.",
+    "vietLai": "Kính gửi: Ban Quản lý Khu công nghiệp Tân Bình\n\nDo nhu cầu sản xuất đang tăng, Công ty TNHH An Phát đề nghị Quý Ban xem xét, hỗ trợ kiểm tra hệ thống PCCC tại nhà xưởng số 2, lô C3, trong thời gian từ ngày 25/11/2026 đến ngày 27/11/2026, nhằm bảo đảm an toàn cho hoạt động sản xuất.\n\nCông ty trân trọng cảm ơn sự quan tâm của Quý Ban.\n\nTrân trọng./."
+  },
+  {
+    "id": "tin-nhan-zalo",
+    "theLoai": "tin-nhan",
+    "nguoiDoc": "nhóm tổ trưởng ca",
+    "goc": "📌 **Thông báo quan trọng**\n✅ **Thời gian:** Ca 1 ngày 21/11/2026\n✅ **Nội dung:** Kiểm kê vật tư một cách toàn diện\n✅ **Địa điểm:** Kho B\n🔥 **Lưu ý:** Việc có mặt đúng giờ là vô cùng cần thiết — mọi người vui lòng đến trước 07:30 — để công tác kiểm kê diễn ra thuận lợi và hiệu quả.\n\nHy vọng mọi người sắp xếp được. Chúc mọi người một ngày làm việc hiệu quả!",
+    "vietLai": "Ca 1 ngày 21/11/2026 kiểm kê toàn bộ vật tư ở Kho B. Mọi người có mặt trước 07:30 để kịp bắt đầu nhé."
+  }
+]

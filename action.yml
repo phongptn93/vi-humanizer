@@ -1,0 +1,51 @@
+name: vi-humanizer
+description: Rà soát văn phong tiếng Việt trong PR — chú thích ngay trên dòng, chặn khi vượt ngưỡng.
+author: Phong Pham
+branding:
+  icon: edit-3
+  color: blue
+
+inputs:
+  paths:
+    description: Tệp hoặc thư mục cần quét, cách nhau bằng dấu cách. Thư mục quét *.md, *.txt bên trong.
+    default: .
+  the-loai:
+    description: Preset thể loại (cong-van, email, bao-cao, thong-bao, tin-nhan, gioi-thieu, huong-dan). Để trống nếu dùng .vihumanizerrc.json.
+    default: ''
+  fail-on:
+    description: ro | nhieu | loi | canh-bao. Để trống thì chỉ chú thích, không chặn.
+    default: nhieu
+  fail-above:
+    description: Chặn khi chỉ số văn mẫu lớn hơn số này. Để trống thì bỏ qua.
+    default: ''
+  sarif:
+    description: Đường dẫn ghi thêm báo cáo SARIF (để tải lên code scanning). Để trống thì không ghi.
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Chú thích trên PR
+      shell: bash
+      run: |
+        set -euo pipefail
+        args=()
+        [ -n "${{ inputs.the-loai }}" ] && args+=(--the-loai "${{ inputs.the-loai }}")
+        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} --format github "${args[@]}"
+    - name: SARIF
+      if: ${{ inputs.sarif != '' }}
+      shell: bash
+      run: |
+        args=()
+        [ -n "${{ inputs.the-loai }}" ] && args+=(--the-loai "${{ inputs.the-loai }}")
+        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} --format sarif "${args[@]}" > "${{ inputs.sarif }}"
+    - name: Kiểm ngưỡng
+      if: ${{ inputs.fail-on != '' || inputs.fail-above != '' }}
+      shell: bash
+      run: |
+        set -euo pipefail
+        args=()
+        [ -n "${{ inputs.the-loai }}" ] && args+=(--the-loai "${{ inputs.the-loai }}")
+        [ -n "${{ inputs.fail-on }}" ] && args+=(--fail-on "${{ inputs.fail-on }}")
+        [ -n "${{ inputs.fail-above }}" ] && args+=(--fail-above "${{ inputs.fail-above }}")
+        node "${{ github.action_path }}/bin/vi-humanizer.js" scan ${{ inputs.paths }} "${args[@]}"

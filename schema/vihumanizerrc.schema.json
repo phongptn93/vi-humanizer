@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/OWNER/vi-humanizer/main/schema/vihumanizerrc.schema.json",
+  "title": "Cấu hình vi-humanizer (.vihumanizerrc.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "preset": {
+      "description": "Preset theo thể loại văn bản.",
+      "enum": ["cong-van", "email", "bao-cao", "thong-bao", "tin-nhan", "gioi-thieu", "huong-dan"]
+    },
+    "rules": {
+      "description": "Đổi mức quy tắc. Khoá là mã (VI20) hoặc tên (mot-cach). Xem: vi-humanizer list",
+      "type": "object",
+      "additionalProperties": { "enum": ["off", "info", "warning", "error"] }
+    },
+    "ignore": {
+      "description": "Tắt quy tắc (mã hoặc tên).",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "minWords": {
+      "description": "Số âm tiết tối thiểu để kết luận mức và chấm chỉ số văn mẫu.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "failOn": {
+      "description": "Mã thoát 1 khi: ro / nhieu (mức văn mẫu), loi (có lỗi), canh-bao (có lỗi hoặc cảnh báo).",
+      "enum": ["ro", "nhieu", "loi", "canh-bao"]
+    },
+    "failAbove": {
+      "description": "Mã thoát 1 khi chỉ số văn mẫu lớn hơn số này (0–100).",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "banned": {
+      "description": "Cụm từ cấm của tổ chức (quy tắc TN01).",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "terms": {
+      "description": "Thuật ngữ bắt buộc. Khoá: chữ PHẢI dùng; giá trị: các chữ không dùng (quy tắc TN02, `fix` tự thay).",
+      "type": "object",
+      "additionalProperties": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+    }
+  }
+}

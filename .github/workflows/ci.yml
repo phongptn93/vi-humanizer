@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: npm run evals
+      - run: npm run docs:check
+
+  action:
+    # Chạy chính GitHub Action của repo trên tài liệu của repo: tài liệu phải theo đúng quy tắc của nó.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: ./
+        with:
+          paths: README.md CONTRIBUTING.md CHANGELOG.md SECURITY.md AGENTS.md skills templates
+          fail-on: canh-bao

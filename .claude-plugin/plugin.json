@@ -1,0 +1,10 @@
+{
+  "name": "vi-humanizer",
+  "version": "1.0.0",
+  "description": "Biên tập văn phong tiếng Việt: rà soát dấu hiệu văn mẫu, viết lại theo thể loại và người đọc, giữ nguyên số liệu.",
+  "author": {
+    "name": "Phong Pham"
+  },
+  "license": "MIT",
+  "keywords": ["vietnamese", "writing", "prose", "humanizer", "editor"]
+}

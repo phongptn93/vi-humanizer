@@ -1,0 +1,6 @@
+- id: vi-humanizer
+  name: vi-humanizer (văn phong tiếng Việt)
+  description: Chặn commit khi tài liệu tiếng Việt có nhiều dấu hiệu văn mẫu.
+  entry: vi-humanizer scan --fail-on nhieu
+  language: node
+  types_or: [markdown, text]

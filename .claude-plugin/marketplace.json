@@ -1,0 +1,15 @@
+{
+  "name": "vi-humanizer",
+  "owner": {
+    "name": "Phong Pham"
+  },
+  "plugins": [
+    {
+      "name": "vi-humanizer",
+      "source": "./",
+      "description": "Biên tập văn phong tiếng Việt: rà soát dấu hiệu văn mẫu, viết lại tự nhiên, giữ nguyên số liệu.",
+      "version": "1.0.0",
+      "license": "MIT"
+    }
+  ]
+}

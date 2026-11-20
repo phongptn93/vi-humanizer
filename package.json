@@ -1,0 +1,54 @@
+{
+  "name": "vi-humanizer",
+  "version": "1.0.0",
+  "description": "Biên tập văn phong tiếng Việt cho AI agent: linter văn mẫu, chính tả, thuật ngữ; sửa tự động có chứng minh không đổi dữ kiện. Skill Claude Code + CLI + GitHub Action, không phụ thuộc.",
+  "type": "module",
+  "bin": {
+    "vi-humanizer": "bin/vi-humanizer.js"
+  },
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "schema",
+    "templates",
+    "action.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "evals": "node scripts/run-evals.js",
+    "docs": "node scripts/gen-docs.js",
+    "docs:check": "node scripts/gen-docs.js --check",
+    "check": "npm test && npm run evals && npm run docs:check"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "vietnamese",
+    "tiếng việt",
+    "humanizer",
+    "writing",
+    "prose",
+    "linter",
+    "style-guide",
+    "llm",
+    "claude-code",
+    "agent-skill",
+    "github-action"
+  ],
+  "author": "Phong Pham",
+  "license": "MIT"
+}

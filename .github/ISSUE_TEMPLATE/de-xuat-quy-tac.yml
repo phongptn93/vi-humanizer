@@ -1,0 +1,35 @@
+name: Đề xuất quy tắc
+description: Một thói quen viết tiếng Việt nên được phát hiện
+labels: [quy-tac]
+body:
+  - type: input
+    id: ten
+    attributes:
+      label: Tên thói quen
+      placeholder: Ví dụ "Mở đầu bằng 'Như chúng ta đã biết'"
+    validations:
+      required: true
+  - type: textarea
+    id: vi-du
+    attributes:
+      label: Ít nhất 3 ví dụ thật
+      description: Trích từ văn bản thật (đã ẩn danh). Ví dụ tự bịa sẽ không được nhận.
+    validations:
+      required: true
+  - type: textarea
+    id: sua
+    attributes:
+      label: Cách sửa đúng
+      description: Viết lại từng ví dụ, không thêm dữ kiện.
+    validations:
+      required: true
+  - type: textarea
+    id: am-tinh
+    attributes:
+      label: Câu gần giống nhưng KHÔNG được báo
+      description: Giúp tránh báo nhầm.
+  - type: dropdown
+    id: muc
+    attributes:
+      label: Mức đề xuất
+      options: [cảnh báo (văn mẫu), lỗi (sai sự thật / rò rỉ), gợi ý]
