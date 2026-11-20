@@ -60,13 +60,22 @@ function canonicalDate(raw) {
   return parts.map((p) => String(Number(p))).join('/');
 }
 
+// Tham số utm_source của công cụ AI: clean/fix cắt nó đi, nên khi đối chiếu cũng bỏ qua — không tính là đổi dữ kiện.
+// Dấu câu cuối URL (thuộc về câu) được trả lại, giống clean.js.
+const AI_UTM = /([?&])utm_source=(chatgpt|openai|perplexity|copilot|gemini|claude)([^&#]*)(&)?/gi;
+
+function canonicalUrl(raw) {
+  const url = raw.replace(AI_UTM, (_m, sep, _src, rest, amp) => (amp ? sep : '') + ((rest.match(/[.,;:!?]+$/) ?? [''])[0]));
+  return url.replace(/[?&]+([.,;:!]*)$/, '$1').toLowerCase();
+}
+
 export function canonical(kind, raw) {
   switch (kind) {
+    case 'url': return canonicalUrl(raw);
     case 'number': return canonicalNumber(raw);
     case 'percent': return `${canonicalNumber(raw.replace('%', '').trim())}%`;
     case 'date': return canonicalDate(raw);
     case 'time': return raw.replace('h', ':').replace(/^0(\d:)/, '$1');
-    case 'url':
     case 'email': return raw.toLowerCase();
     default: return raw;
   }

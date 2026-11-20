@@ -68,3 +68,12 @@ test('ký tự vô hình không làm đổi dữ kiện; fix dọn được mà 
   assert.equal(r.ok, true);
   assert.ok(!r.text.includes(zwsp));
 });
+
+test('cắt utm_source của công cụ AI không tính là đổi dữ kiện', () => {
+  assert.equal(compareFacts('Xem https://a.vn/b?utm_source=chatgpt.com.', 'Xem https://a.vn/b.').ok, true);
+  assert.equal(compareFacts('Xem https://a.vn/b?utm_source=chatgpt.com&x=1', 'Xem https://a.vn/b?x=1').ok, true);
+  assert.equal(compareFacts('Xem https://a.vn/b?x=1', 'Xem https://a.vn/b?x=2').ok, false);
+  const r = fix('Doanh thu tăng 12% citeturn0search3.\nXem https://a.vn/b?utm_source=chatgpt.com.');
+  assert.equal(r.ok, true);
+  assert.equal(r.text, 'Doanh thu tăng 12%.\nXem https://a.vn/b.');
+});

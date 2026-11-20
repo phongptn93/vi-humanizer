@@ -19,6 +19,7 @@ Mã và tên quy tắc (`VI20` / `mot-cach`) là một phần của API: đổi 
 ### Sửa tự động
 - `fix`: sửa chính tả – trình bày, "một cách + tính từ", "tiến hành công tác", thuật ngữ của tổ chức; in diff; từ chối ghi nếu dữ kiện bị đổi.
 - `clean`: NFC, ký tự ẩn, mã trích dẫn của công cụ chat, `utm_source` của công cụ AI.
+- Đối chiếu dữ kiện bỏ qua ký tự ẩn và `utm_source` của công cụ AI, nên `fix` không còn từ chối một lần dọn thuần túy như vậy (vd `Mã` + U+200B + `SP01` → `MãSP01`).
 
 ### CLI và tích hợp
 - Lệnh `scan`, `fix`, `compare`, `explain`, `list`, `clean`, `init`; quét cả thư mục.
